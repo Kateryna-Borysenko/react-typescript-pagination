@@ -1,6 +1,7 @@
-// import { getPaginationItems } from "../lib/pagination";
+import { getPaginationItems } from "../../lib/pagination";
 import PageLink from "../PageLink/PageLink";
 import "./Pagination.css";
+// import { ReactComponent as ArrowRight } from "../../images/arrow_right.svg"; //импорт иконок
 
 export type Props = {
   currentPage: number;
@@ -15,7 +16,7 @@ export default function Pagination({
   maxLength,
   setCurrentPage,
 }: Props) {
-  const pageNums = [1, 2, 3];
+  const pageNums = getPaginationItems(currentPage, lastPage, maxLength);
 
   return (
     <nav className="pagination" aria-label="Pagination">
@@ -32,7 +33,9 @@ export default function Pagination({
           disabled={isNaN(pageNum)}
           onClick={() => setCurrentPage(pageNum)}
         >
-          {pageNum}
+          {!isNaN(pageNum) ? pageNum : "..."}
+          {/* если нужно отобразить иконку */}
+          {/* {!isNaN(pageNum) ? pageNum : <ArrowRight />} */}
         </PageLink>
       ))}
       <PageLink
