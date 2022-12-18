@@ -11,3 +11,17 @@ video: 00:36:00 logic in lib/pagination.ts
 <img src="./src/images/Screenshot-1.png" width="200">
 
  <img src="./src/images/Screenshot-2.png" width="200">
+
+#Test
+video tutorial: https://www.youtube.com/watch?v=FQA-6Nyr6kM&t=68s
+text tutorial: https://dominicarrojado.com/posts/how-to-create-your-own-pagination-in-react-and-typescript-with-tests-part-2/
+
+для тестов понадобиться
+yarn add @faker-js/faker - помогает нам генерировать огромное количество поддельных (но реалистичных) данных для тестирования
+
+https://fakerjs.dev/
+
+ctrl + C останавливаем
+запустить можно npm test
+выйти Q
+или yarn test --coverage
